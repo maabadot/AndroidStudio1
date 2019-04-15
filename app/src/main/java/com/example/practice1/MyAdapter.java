@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -49,7 +50,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>
         {
             myViewHolder.myEvenImageView.setImageResource(R.drawable.white4head100px);
             myViewHolder.itemView.setBackgroundResource(R.color.color4head);
-            s = nf.format(i+1);
+            s = nf.format(1000000 - i);
             String capitalized = s.substring(0, 1).toUpperCase() + s.substring(1).toLowerCase();
             myViewHolder.myEvenTextView.setText(capitalized);
             //myViewHolder.myEvenTextView.setText(String.valueOf(i));
@@ -58,7 +59,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>
         {
             myViewHolder.myEvenImageView.setImageResource(R.drawable.greypogchamp100px);
             myViewHolder.itemView.setBackgroundResource(R.color.colorpogchamp);
-            s = nf.format(i+1);
+            s = nf.format(1000000 - i);
             String capitalized = s.substring(0, 1).toUpperCase() + s.substring(1).toLowerCase();
             myViewHolder.myEvenTextView.setText(capitalized);
             //myViewHolder.myEvenTextView.setText(String.valueOf(i));
@@ -91,4 +92,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>
             myEvenTextView.setText(String.valueOf(listIndex+1));
         }
     }
+
+
 }
